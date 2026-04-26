@@ -33,18 +33,18 @@ export function Footer() {
             <ul className="mt-4 space-y-3 text-sm text-muted-foreground">
               <li className="flex items-start gap-2">
                 <MapPin className="h-4 w-4 mt-0.5 text-primary shrink-0" />
-                ul. Warszawska 1, 41-250 Czeladź
+                ul. Kamienna 12, 41-250 Czeladź
               </li>
               <li>
-                <a href="tel:+48500000000" className="flex items-center gap-2 hover:text-primary transition-colors">
+                <a href="tel:+48730020887" className="flex items-center gap-2 hover:text-primary transition-colors">
                   <Phone className="h-4 w-4 text-primary shrink-0" />
-                  +48 500 000 000
+                  +48 730 020 887
                 </a>
               </li>
               <li>
-                <a href="mailto:kontakt@nicar-serwis.pl" className="flex items-center gap-2 hover:text-primary transition-colors">
+                <a href="mailto:kontakt@nicarautoserwis.pl" className="flex items-center gap-2 hover:text-primary transition-colors">
                   <Mail className="h-4 w-4 text-primary shrink-0" />
-                  kontakt@nicar-serwis.pl
+                  kontakt@nicarautoserwis.pl
                 </a>
               </li>
             </ul>

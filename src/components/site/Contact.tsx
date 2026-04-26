@@ -26,7 +26,7 @@ export function Contact() {
         {/* Big phone CTA */}
         <div className="reveal mt-12 mx-auto max-w-3xl">
           <a
-            href="tel:+48500000000"
+            href="tel:+48730020887"
             className="group relative block overflow-hidden rounded-3xl border border-primary/40 bg-gradient-primary p-8 md:p-10 text-center shadow-elegant transition-all duration-500 hover:scale-[1.02] hover:shadow-glow"
           >
             <div className="absolute inset-0 opacity-30 bg-[radial-gradient(circle_at_top_right,white,transparent_60%)]" />
@@ -39,7 +39,7 @@ export function Contact() {
                   Zadzwoń teraz
                 </div>
                 <div className="text-3xl md:text-5xl font-bold tracking-tight">
-                  +48 500 000 000
+                  +48 730 020 887
                 </div>
               </div>
             </div>
@@ -53,7 +53,7 @@ export function Contact() {
             </div>
             <h3 className="mt-4 font-semibold">Adres</h3>
             <p className="mt-1 text-sm text-muted-foreground">
-              ul. Warszawska 1<br />
+              ul. Kamienna 12<br />
               41-250 Czeladź
             </p>
           </div>
@@ -79,16 +79,16 @@ export function Contact() {
             </div>
             <h3 className="mt-4 font-semibold">Kontakt</h3>
             <a
-              href="tel:+48500000000"
+              href="tel:+48730020887"
               className="mt-2 block text-sm text-muted-foreground hover:text-primary transition-colors"
             >
-              +48 500 000 000
+              +48 730 020 887
             </a>
             <a
-              href="mailto:kontakt@nicar-serwis.pl"
+              href="mailto:kontakt@nicarautoserwis.pl"
               className="block text-sm text-muted-foreground hover:text-primary transition-colors"
             >
-              kontakt@nicar-serwis.pl
+              kontakt@nicarautoserwis.pl
             </a>
           </div>
         </div>

@@ -67,7 +67,7 @@ export function Hero() {
           style={{ animationDelay: "0.6s" }}
         >
           <a
-            href="tel:+48500000000"
+            href="tel:+48730020887"
             className="group relative inline-flex items-center gap-3 rounded-full bg-gradient-primary px-8 py-4 text-base font-semibold text-primary-foreground shadow-elegant transition-all duration-300 hover:scale-105 hover:shadow-glow"
           >
             <Phone className="h-5 w-5 transition-transform group-hover:rotate-12" />
