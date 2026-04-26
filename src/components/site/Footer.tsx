@@ -33,7 +33,7 @@ export function Footer() {
             <ul className="mt-4 space-y-3 text-sm text-muted-foreground">
               <li className="flex items-start gap-2">
                 <MapPin className="h-4 w-4 mt-0.5 text-primary shrink-0" />
-                ul. Kamienna 12, 41-250 Czeladź
+                Kamienna 12, 41-250 Czeladź
               </li>
               <li>
                 <a href="tel:+48730020887" className="flex items-center gap-2 hover:text-primary transition-colors">

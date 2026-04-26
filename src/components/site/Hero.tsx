@@ -87,9 +87,9 @@ export function Hero() {
           style={{ animationDelay: "0.8s" }}
         >
           {[
+            { v: "4.9★", l: "Ocena · 98 opinii" },
             { v: "15+", l: "Lat doświadczenia" },
-            { v: "5000+", l: "Zadowolonych klientów" },
-            { v: "4.9★", l: "Średnia ocena" },
+            { v: "24h", l: "Szybka realizacja" },
           ].map((s) => (
             <div key={s.l} className="text-center">
               <div className="text-2xl md:text-4xl font-bold text-gradient">{s.v}</div>

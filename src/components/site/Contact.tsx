@@ -53,7 +53,7 @@ export function Contact() {
             </div>
             <h3 className="mt-4 font-semibold">Adres</h3>
             <p className="mt-1 text-sm text-muted-foreground">
-              ul. Kamienna 12<br />
+              Kamienna 12<br />
               41-250 Czeladź
             </p>
           </div>
@@ -96,8 +96,8 @@ export function Contact() {
         {/* Map */}
         <div className="reveal mt-10 overflow-hidden rounded-2xl border border-border/60 shadow-card">
           <iframe
-            title="Mapa lokalizacji Nicar Auto Serwis Czeladź"
-            src="https://www.google.com/maps?q=Czelad%C5%BA&output=embed"
+            title="Mapa lokalizacji Nicar Auto Serwis — Kamienna 12, Czeladź"
+            src="https://www.google.com/maps?q=Kamienna+12,+41-250+Czelad%C5%BA&output=embed"
             width="100%"
             height="400"
             loading="lazy"

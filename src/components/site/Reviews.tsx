@@ -50,6 +50,19 @@ export function Reviews() {
           <h2 className="reveal mt-4 text-3xl md:text-5xl font-bold leading-tight">
             Zaufały nam <span className="text-gradient">tysiące kierowców</span>
           </h2>
+          <div className="reveal mt-6 inline-flex items-center gap-3 rounded-full border border-primary/30 bg-primary/10 px-5 py-2 backdrop-blur">
+            <div className="flex gap-0.5">
+              {Array.from({ length: 5 }).map((_, k) => (
+                <Star key={k} className="h-4 w-4 fill-primary text-primary" />
+              ))}
+            </div>
+            <span className="text-sm font-semibold">
+              4.9 / 5
+            </span>
+            <span className="text-sm text-muted-foreground">
+              · 98 opinii
+            </span>
+          </div>
         </div>
 
         <div className="reveal mt-14 max-w-3xl mx-auto">
