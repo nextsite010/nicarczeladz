@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { Link } from "@tanstack/react-router";
 import { Navbar } from "@/components/site/Navbar";
 import { Hero } from "@/components/site/Hero";
 import { About } from "@/components/site/About";
@@ -8,6 +9,7 @@ import { WhyUs } from "@/components/site/WhyUs";
 import { Contact } from "@/components/site/Contact";
 import { Footer } from "@/components/site/Footer";
 import { useReveal } from "@/hooks/use-reveal";
+import { ArrowRight } from "lucide-react";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -37,12 +39,28 @@ function Index() {
       <main>
         <Hero />
         <About />
+        <SectionMore to="/o-nas" label="Poznaj nas bliżej" />
         <Services />
+        <SectionMore to="/uslugi" label="Zobacz pełną ofertę usług" />
         <Reviews />
+        <SectionMore to="/opinie" label="Czytaj wszystkie opinie" />
         <WhyUs />
         <Contact />
       </main>
       <Footer />
+    </div>
+  );
+}
+
+function SectionMore({ to, label }: { to: "/o-nas" | "/uslugi" | "/opinie"; label: string }) {
+  return (
+    <div className="container mx-auto -mt-8 mb-4 px-4 md:px-8 text-center">
+      <Link
+        to={to}
+        className="inline-flex items-center gap-2 text-sm font-semibold text-primary hover:gap-3 transition-all"
+      >
+        {label} <ArrowRight className="h-4 w-4" />
+      </Link>
     </div>
   );
 }
