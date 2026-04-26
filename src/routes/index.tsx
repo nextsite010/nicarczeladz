@@ -8,6 +8,10 @@ import { Reviews } from "@/components/site/Reviews";
 import { WhyUs } from "@/components/site/WhyUs";
 import { Contact } from "@/components/site/Contact";
 import { Footer } from "@/components/site/Footer";
+import { Marquee } from "@/components/site/Marquee";
+import { QuickQuote } from "@/components/site/QuickQuote";
+import { Faq } from "@/components/site/Faq";
+import { MobileCTA } from "@/components/site/MobileCTA";
 import { useReveal } from "@/hooks/use-reveal";
 import { ArrowRight } from "lucide-react";
 
@@ -38,16 +42,20 @@ function Index() {
       <Navbar />
       <main>
         <Hero />
+        <Marquee />
         <About />
         <SectionMore to="/o-nas" label="Poznaj nas bliżej" />
         <Services />
         <SectionMore to="/uslugi" label="Zobacz pełną ofertę usług" />
+        <QuickQuote />
         <Reviews />
         <SectionMore to="/opinie" label="Czytaj wszystkie opinie" />
         <WhyUs />
+        <Faq />
         <Contact />
       </main>
       <Footer />
+      <MobileCTA />
     </div>
   );
 }

@@ -4,6 +4,8 @@ import { Navbar } from "@/components/site/Navbar";
 import { Footer } from "@/components/site/Footer";
 import { PageHero } from "@/components/site/PageHero";
 import { Contact } from "@/components/site/Contact";
+import { Faq } from "@/components/site/Faq";
+import { MobileCTA } from "@/components/site/MobileCTA";
 
 export const Route = createFileRoute("/kontakt")({
   head: () => ({
@@ -36,8 +38,10 @@ function KontaktPage() {
           description="Zadzwoń, napisz lub przyjedź. Doradzimy najlepsze rozwiązanie dla Twojego auta."
         />
         <Contact />
+        <Faq />
       </main>
       <Footer />
+      <MobileCTA />
     </div>
   );
 }

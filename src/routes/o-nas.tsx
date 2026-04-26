@@ -5,6 +5,7 @@ import { Footer } from "@/components/site/Footer";
 import { PageHero } from "@/components/site/PageHero";
 import { About } from "@/components/site/About";
 import { WhyUs } from "@/components/site/WhyUs";
+import { MobileCTA } from "@/components/site/MobileCTA";
 import { Phone } from "lucide-react";
 
 export const Route = createFileRoute("/o-nas")({
@@ -51,6 +52,7 @@ function OnasPage() {
         </section>
       </main>
       <Footer />
+      <MobileCTA />
     </div>
   );
 }

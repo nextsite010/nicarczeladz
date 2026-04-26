@@ -4,6 +4,7 @@ import { Navbar } from "@/components/site/Navbar";
 import { Footer } from "@/components/site/Footer";
 import { PageHero } from "@/components/site/PageHero";
 import { Reviews } from "@/components/site/Reviews";
+import { MobileCTA } from "@/components/site/MobileCTA";
 import { Phone } from "lucide-react";
 
 export const Route = createFileRoute("/opinie")({
@@ -49,6 +50,7 @@ function OpiniePage() {
         </section>
       </main>
       <Footer />
+      <MobileCTA />
     </div>
   );
 }
