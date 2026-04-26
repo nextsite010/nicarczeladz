@@ -4,7 +4,7 @@ const points = [
   { icon: BadgeCheck, title: "Gwarancja na naprawy", desc: "Każda usługa objęta pisemną gwarancją serwisową." },
   { icon: Banknote, title: "Uczciwe ceny", desc: "Transparentny cennik, bez ukrytych kosztów i niespodzianek." },
   { icon: Zap, title: "Ekspresowy serwis", desc: "Większość napraw w ciągu 24 godzin od przyjęcia auta." },
-  { icon: Users, title: "Doświadczony zespół", desc: "Mechanicy z 15+ letnim doświadczeniem w branży." },
+  { icon: Users, title: "Doświadczony zespół", desc: "Mechanicy z 5-letnim doświadczeniem w branży." },
   { icon: HeartHandshake, title: "Indywidualne podejście", desc: "Doradzamy szczerze i traktujemy każde auto z troską." },
 ];
 

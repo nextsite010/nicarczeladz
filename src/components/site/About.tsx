@@ -27,7 +27,7 @@ export function About() {
             />
           </div>
           <div className="absolute -bottom-6 -right-6 hidden md:block rounded-2xl bg-card border border-border/60 px-6 py-5 shadow-elegant backdrop-blur">
-            <div className="text-3xl font-bold text-gradient">15+</div>
+            <div className="text-3xl font-bold text-gradient">5</div>
             <div className="text-xs uppercase tracking-wider text-muted-foreground mt-1">
               lat na rynku
             </div>

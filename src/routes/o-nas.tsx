@@ -15,7 +15,7 @@ export const Route = createFileRoute("/o-nas")({
       {
         name: "description",
         content:
-          "Poznaj zespół Nicar Auto Serwis w Czeladzi — 15+ lat doświadczenia, certyfikowani mechanicy, uczciwe ceny i pasja do motoryzacji.",
+          "Poznaj zespół Nicar Auto Serwis w Czeladzi — 5 lat doświadczenia, certyfikowani mechanicy, uczciwe ceny i pasja do motoryzacji.",
       },
       { property: "og:title", content: "O nas — Nicar Auto Serwis Czeladź" },
       {
@@ -36,7 +36,7 @@ function OnasPage() {
         <PageHero
           eyebrow="O nas"
           title={<>Pasjonaci motoryzacji <span className="text-gradient">z Czeladzi</span></>}
-          description="Od ponad 15 lat dbamy o auta naszych klientów. Łączymy doświadczenie, nowoczesny sprzęt i uczciwe podejście."
+          description="Od 5 lat dbamy o auta naszych klientów. Łączymy doświadczenie, nowoczesny sprzęt i uczciwe podejście."
         />
         <About />
         <WhyUs />

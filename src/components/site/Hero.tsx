@@ -66,7 +66,7 @@ export function Hero() {
           className="mx-auto mt-7 max-w-2xl text-lg md:text-xl text-foreground/85 leading-relaxed animate-fade-up"
           style={{ animationDelay: "0.4s" }}
         >
-          Szybka diagnoza, <span className="text-foreground font-semibold">uczciwe ceny</span> i mechanicy z 15+ letnim
+          Szybka diagnoza, <span className="text-foreground font-semibold">uczciwe ceny</span> i mechanicy z 5-letnim
           stażem. Wycena w 30 minut. Naprawa zwykle w 24h.
         </p>
 
@@ -96,7 +96,7 @@ export function Hero() {
         >
           {[
             { v: "4.9★", l: "Ocena · 98 opinii" },
-            { v: "15+", l: "Lat doświadczenia" },
+            { v: "5", l: "Lat doświadczenia" },
             { v: "24h", l: "Szybka realizacja" },
           ].map((s) => (
             <div key={s.l} className="relative text-center rounded-xl border border-border/40 bg-background/30 backdrop-blur px-2 py-4">
