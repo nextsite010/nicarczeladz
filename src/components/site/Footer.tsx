@@ -12,14 +12,14 @@ export function Footer() {
               alt="Nicar Auto Serwis — logo"
               className="h-14 w-auto object-contain"
             />
-            <p className="mt-5 text-sm text-muted-foreground leading-relaxed max-w-sm">
+            <p className="mt-5 text-base text-foreground/75 leading-relaxed max-w-sm">
               Profesjonalny serwis samochodowy w Czeladzi. Szybko, uczciwie, z gwarancją jakości.
             </p>
           </div>
 
           <div>
             <h4 className="text-sm font-semibold uppercase tracking-wider">Nawigacja</h4>
-            <ul className="mt-4 space-y-2 text-sm text-muted-foreground">
+            <ul className="mt-4 space-y-2.5 text-base text-foreground/75">
               <li><a href="#o-nas" className="hover:text-primary transition-colors">O nas</a></li>
               <li><a href="#uslugi" className="hover:text-primary transition-colors">Usługi</a></li>
               <li><a href="#opinie" className="hover:text-primary transition-colors">Opinie</a></li>
@@ -30,7 +30,7 @@ export function Footer() {
 
           <div>
             <h4 className="text-sm font-semibold uppercase tracking-wider">Kontakt</h4>
-            <ul className="mt-4 space-y-3 text-sm text-muted-foreground">
+            <ul className="mt-4 space-y-3 text-base text-foreground/75">
               <li className="flex items-start gap-2">
                 <MapPin className="h-4 w-4 mt-0.5 text-primary shrink-0" />
                 Kamienna 12, 41-250 Czeladź

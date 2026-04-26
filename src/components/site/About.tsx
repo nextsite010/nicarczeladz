@@ -41,7 +41,7 @@ export function About() {
           <h2 className="reveal mt-4 text-3xl md:text-5xl font-bold leading-tight">
             Pasja do motoryzacji w każdym detalu
           </h2>
-          <p className="reveal mt-6 text-base md:text-lg text-muted-foreground leading-relaxed">
+          <p className="reveal mt-6 text-lg md:text-xl text-foreground/85 leading-relaxed">
             Nicar Auto Serwis to zespół doświadczonych mechaników z Czeladzi, którzy traktują każde auto
             jak własne. Łączymy najnowsze technologie diagnostyczne z tradycyjnym, rzetelnym podejściem
             do klienta. Uczciwe ceny, jasna komunikacja i jakość, do której wracają.
@@ -58,7 +58,7 @@ export function About() {
                 </div>
                 <div>
                   <h3 className="font-semibold">{f.title}</h3>
-                  <p className="mt-1 text-sm text-muted-foreground">{f.desc}</p>
+                  <p className="mt-1.5 text-sm md:text-base text-foreground/75 leading-relaxed">{f.desc}</p>
                 </div>
               </div>
             ))}

@@ -18,7 +18,7 @@ export function Contact() {
           <h2 className="reveal mt-4 text-3xl md:text-5xl font-bold leading-tight">
             Umów wizytę <span className="text-gradient">już dziś</span>
           </h2>
-          <p className="reveal mt-5 text-muted-foreground">
+          <p className="reveal mt-5 text-lg text-foreground/80 leading-relaxed">
             Zadzwoń, a doradzimy najlepsze rozwiązanie dla Twojego auta.
           </p>
         </div>
@@ -52,7 +52,7 @@ export function Contact() {
               <MapPin className="h-5 w-5" />
             </div>
             <h3 className="mt-4 font-semibold">Adres</h3>
-            <p className="mt-1 text-sm text-muted-foreground">
+            <p className="mt-2 text-base text-foreground/80 leading-relaxed">
               Kamienna 12<br />
               41-250 Czeladź
             </p>
@@ -63,11 +63,11 @@ export function Contact() {
               <Clock className="h-5 w-5" />
             </div>
             <h3 className="mt-4 font-semibold">Godziny otwarcia</h3>
-            <ul className="mt-2 space-y-1 text-sm text-muted-foreground">
+            <ul className="mt-3 space-y-1.5 text-base text-foreground/80">
               {hours.map((h) => (
                 <li key={h.d} className="flex justify-between gap-3">
                   <span>{h.d}</span>
-                  <span className="text-foreground/90">{h.h}</span>
+                  <span className="font-medium text-foreground">{h.h}</span>
                 </li>
               ))}
             </ul>
@@ -80,13 +80,13 @@ export function Contact() {
             <h3 className="mt-4 font-semibold">Kontakt</h3>
             <a
               href="tel:+48730020887"
-              className="mt-2 block text-sm text-muted-foreground hover:text-primary transition-colors"
+              className="mt-3 block text-base text-foreground/80 hover:text-primary transition-colors"
             >
               +48 730 020 887
             </a>
             <a
               href="mailto:kontakt@nicarautoserwis.pl"
-              className="block text-sm text-muted-foreground hover:text-primary transition-colors"
+              className="mt-1 block text-base text-foreground/80 hover:text-primary transition-colors"
             >
               kontakt@nicarautoserwis.pl
             </a>
