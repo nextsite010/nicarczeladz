@@ -1,4 +1,4 @@
-import { Phone, Mail, MapPin } from "lucide-react";
+import { Phone, Mail, MapPin, Facebook } from "lucide-react";
 import { Link } from "@tanstack/react-router";
 import logo from "@/assets/nicar-logo.png";
 
@@ -16,6 +16,15 @@ export function Footer() {
             <p className="mt-5 text-base text-foreground/75 leading-relaxed max-w-sm">
               Profesjonalny serwis samochodowy w Czeladzi. Szybko, uczciwie, z gwarancją jakości.
             </p>
+            <a
+              href="https://www.facebook.com/NICARAutoSerwis/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Nicar Auto Serwis na Facebooku"
+              className="mt-5 inline-flex h-11 w-11 items-center justify-center rounded-full border border-border/60 bg-background/40 text-foreground/80 transition-all hover:border-primary/60 hover:text-primary hover:scale-110"
+            >
+              <Facebook className="h-5 w-5" />
+            </a>
           </div>
 
           <div>
