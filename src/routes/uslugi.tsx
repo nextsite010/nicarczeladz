@@ -4,6 +4,9 @@ import { Navbar } from "@/components/site/Navbar";
 import { Footer } from "@/components/site/Footer";
 import { PageHero } from "@/components/site/PageHero";
 import { Services } from "@/components/site/Services";
+import { QuickQuote } from "@/components/site/QuickQuote";
+import { Faq } from "@/components/site/Faq";
+import { MobileCTA } from "@/components/site/MobileCTA";
 import { Phone } from "lucide-react";
 
 export const Route = createFileRoute("/uslugi")({
@@ -37,6 +40,8 @@ function UslugiPage() {
           description="Od rutynowego przeglądu po kompleksowe naprawy — realizujemy każdy zakres usług w jednym miejscu."
         />
         <Services />
+        <QuickQuote />
+        <Faq />
         <section className="py-16 md:py-20">
           <div className="container mx-auto px-4 md:px-8 text-center">
             <p className="text-foreground/80 text-lg mb-6">
@@ -52,6 +57,7 @@ function UslugiPage() {
         </section>
       </main>
       <Footer />
+      <MobileCTA />
     </div>
   );
 }

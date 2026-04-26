@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Phone, ChevronDown } from "lucide-react";
+import { Phone, ChevronDown, ShieldCheck, Star, Clock } from "lucide-react";
 import heroImg from "@/assets/hero-workshop.jpg";
 import heroVideo from "@/assets/hero-video.mp4.asset.json";
 
@@ -36,30 +36,38 @@ export function Hero() {
         </video>
         <div className="absolute inset-0 bg-[var(--gradient-hero-overlay)]" />
         <div className="absolute inset-0 bg-radial-glow" />
+        <div className="absolute inset-0 bg-grid-industrial opacity-50" />
+        <div className="absolute inset-0 bg-noise opacity-[0.06] mix-blend-overlay" />
       </div>
 
       <div className="relative z-10 container mx-auto px-4 md:px-8 pt-28 pb-20 text-center">
-        <span
-          className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-4 py-1.5 text-xs font-medium uppercase tracking-[0.2em] text-primary backdrop-blur animate-fade-in"
-          style={{ animationDelay: "0.1s" }}
-        >
-          <span className="h-1.5 w-1.5 rounded-full bg-primary animate-glow" />
-          Auto Serwis · Czeladź
-        </span>
+        <div className="flex flex-wrap items-center justify-center gap-2 animate-fade-in" style={{ animationDelay: "0.1s" }}>
+          <span className="inline-flex items-center gap-2 rounded-full border border-primary/40 bg-primary/10 px-4 py-1.5 text-xs font-bold uppercase tracking-[0.2em] text-primary backdrop-blur">
+            <span className="h-1.5 w-1.5 rounded-full bg-primary animate-glow" />
+            Auto Serwis · Czeladź
+          </span>
+          <span className="inline-flex items-center gap-1.5 rounded-full border border-border/60 bg-background/40 px-3 py-1.5 text-xs font-semibold text-foreground/85 backdrop-blur">
+            <Star className="h-3 w-3 fill-primary text-primary" /> 4.9 / 5
+          </span>
+          <span className="inline-flex items-center gap-1.5 rounded-full border border-border/60 bg-background/40 px-3 py-1.5 text-xs font-semibold text-foreground/85 backdrop-blur">
+            <ShieldCheck className="h-3 w-3 text-primary" /> Gwarancja
+          </span>
+        </div>
 
         <h1
-          className="mt-6 text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-[1.05] animate-fade-up"
+          className="mt-6 text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-stencil font-black tracking-tight leading-[0.95] animate-fade-up"
           style={{ animationDelay: "0.2s" }}
         >
-          Profesjonalny serwis <br className="hidden sm:block" />
-          samochodowy w <span className="text-gradient">Czeladzi</span>
+          Twój warsztat <br className="hidden sm:block" />
+          w <span className="text-gradient">Czeladzi</span>
         </h1>
 
         <p
           className="mx-auto mt-7 max-w-2xl text-lg md:text-xl text-foreground/85 leading-relaxed animate-fade-up"
           style={{ animationDelay: "0.4s" }}
         >
-          Szybka diagnoza, uczciwe ceny, doświadczeni mechanicy. Twoje auto w&nbsp;rękach pasjonatów.
+          Szybka diagnoza, <span className="text-foreground font-semibold">uczciwe ceny</span> i mechanicy z 15+ letnim
+          stażem. Wycena w 30 minut. Naprawa zwykle w 24h.
         </p>
 
         <div
@@ -68,16 +76,16 @@ export function Hero() {
         >
           <a
             href="tel:+48730020887"
-            className="group relative inline-flex items-center gap-3 rounded-full bg-gradient-primary px-8 py-4 text-base font-semibold text-primary-foreground shadow-elegant transition-all duration-300 hover:scale-105 hover:shadow-glow"
+            className="group relative inline-flex items-center gap-3 rounded-full bg-gradient-primary px-8 py-4 text-base font-bold uppercase tracking-wider text-primary-foreground shadow-elegant transition-all duration-300 hover:scale-105 hover:shadow-glow"
           >
             <Phone className="h-5 w-5 transition-transform group-hover:rotate-12" />
             Zadzwoń teraz
           </a>
           <a
-            href="#uslugi"
-            className="inline-flex items-center gap-2 rounded-full border border-border/60 bg-background/40 px-8 py-4 text-base font-medium backdrop-blur transition-all duration-300 hover:border-primary/60 hover:bg-background/60"
+            href="#wycena"
+            className="inline-flex items-center gap-2 rounded-full border border-border/60 bg-background/40 px-8 py-4 text-base font-bold uppercase tracking-wider backdrop-blur transition-all duration-300 hover:border-primary/60 hover:bg-background/60"
           >
-            Zobacz usługi
+            <Clock className="h-4 w-4" /> Darmowa wycena
           </a>
         </div>
 
@@ -91,9 +99,9 @@ export function Hero() {
             { v: "15+", l: "Lat doświadczenia" },
             { v: "24h", l: "Szybka realizacja" },
           ].map((s) => (
-            <div key={s.l} className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-gradient">{s.v}</div>
-              <div className="mt-2 text-xs md:text-sm font-medium tracking-wide text-foreground/80">
+            <div key={s.l} className="relative text-center rounded-xl border border-border/40 bg-background/30 backdrop-blur px-2 py-4">
+              <div className="text-3xl md:text-4xl font-stencil font-black text-gradient">{s.v}</div>
+              <div className="mt-2 text-xs md:text-sm font-semibold uppercase tracking-wider text-foreground/75">
                 {s.l}
               </div>
             </div>
