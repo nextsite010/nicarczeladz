@@ -4,7 +4,7 @@ import logo from "@/assets/nicar-logo.png";
 
 export function Footer() {
   return (
-    <footer className="relative border-t border-border/60 bg-card/30 backdrop-blur">
+    <footer className="relative border-t border-border/60 bg-card/30 backdrop-blur pb-24 lg:pb-0">
       <div className="container mx-auto px-4 md:px-8 py-14">
         <div className="grid md:grid-cols-3 gap-10">
           <div>
