@@ -43,9 +43,9 @@ export function Footer() {
                 </a>
               </li>
               <li>
-                <a href="mailto:kontakt@nicarautoserwis.pl" className="flex items-center gap-2 hover:text-primary transition-colors">
+                <a href="mailto:nicarautoserwis@gmail.com" className="flex items-center gap-2 hover:text-primary transition-colors">
                   <Mail className="h-4 w-4 text-primary shrink-0" />
-                  kontakt@nicarautoserwis.pl
+                  nicarautoserwis@gmail.com
                 </a>
               </li>
             </ul>

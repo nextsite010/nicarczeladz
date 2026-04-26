@@ -85,10 +85,10 @@ export function Contact() {
               +48 730 020 887
             </a>
             <a
-              href="mailto:kontakt@nicarautoserwis.pl"
+              href="mailto:nicarautoserwis@gmail.com"
               className="mt-1 block text-base text-foreground/80 hover:text-primary transition-colors"
             >
-              kontakt@nicarautoserwis.pl
+              nicarautoserwis@gmail.com
             </a>
           </div>
         </div>
