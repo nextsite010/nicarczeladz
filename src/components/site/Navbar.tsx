@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Phone } from "lucide-react";
-import logo from "@/assets/nicar-logo.png";
+import { Logo } from "./Logo";
 
 const links = [
   { href: "#o-nas", label: "O nas" },
@@ -29,22 +29,12 @@ export function Navbar() {
       }`}
     >
       <div className="container mx-auto flex items-center justify-between px-4 md:px-8">
-        <a href="#top" className="flex items-center gap-3 group">
-          <img
-            src={logo}
-            alt="Nicar Auto Serwis Czeladź — logo"
-            className="h-10 w-10 md:h-12 md:w-12 object-contain transition-transform duration-500 group-hover:rotate-3"
-            width={48}
-            height={48}
-          />
-          <span className="hidden sm:flex flex-col leading-tight">
-            <span className="text-base font-bold tracking-wide">
-              NI<span className="text-primary">CAR</span>
-            </span>
-            <span className="text-[10px] uppercase tracking-[0.25em] text-muted-foreground">
-              Auto Serwis
-            </span>
-          </span>
+        <a
+          href="#top"
+          aria-label="Nicar Auto Serwis — strona główna"
+          className="group transition-transform duration-300 hover:scale-[1.03]"
+        >
+          <Logo />
         </a>
 
         <nav className="hidden lg:flex items-center gap-8">
