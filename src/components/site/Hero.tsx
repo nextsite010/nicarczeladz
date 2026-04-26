@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Phone, ChevronDown } from "lucide-react";
 import heroImg from "@/assets/hero-workshop.jpg";
+import heroVideo from "@/assets/hero-video.mp4.asset.json";
 
 export function Hero() {
   const [offset, setOffset] = useState(0);
@@ -16,18 +17,23 @@ export function Hero() {
       id="top"
       className="relative min-h-screen w-full overflow-hidden flex items-center justify-center"
     >
-      {/* Parallax background */}
+      {/* Parallax animated background */}
       <div
         className="absolute inset-0 will-change-transform"
         style={{ transform: `translate3d(0, ${offset}px, 0)` }}
       >
-        <img
-          src={heroImg}
-          alt="Wnętrze nowoczesnego warsztatu samochodowego Nicar"
-          className="h-full w-full object-cover animate-slow-zoom"
-          width={1920}
-          height={1080}
-        />
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="auto"
+          poster={heroImg}
+          className="h-full w-full object-cover"
+          aria-hidden="true"
+        >
+          <source src={heroVideo.url} type="video/mp4" />
+        </video>
         <div className="absolute inset-0 bg-[var(--gradient-hero-overlay)]" />
         <div className="absolute inset-0 bg-radial-glow" />
       </div>
