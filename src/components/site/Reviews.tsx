@@ -81,12 +81,12 @@ export function Reviews() {
                         <Star key={k} className="h-5 w-5 fill-primary text-primary" />
                       ))}
                     </div>
-                    <p className="text-center text-lg md:text-xl leading-relaxed text-foreground/90">
+                    <p className="text-center text-lg md:text-2xl leading-relaxed text-foreground">
                       „{r.text}"
                     </p>
                     <div className="mt-7 text-center">
-                      <div className="font-semibold">{r.name}</div>
-                      <div className="text-sm text-muted-foreground">{r.role}</div>
+                      <div className="text-base font-semibold">{r.name}</div>
+                      <div className="text-sm text-foreground/70">{r.role}</div>
                     </div>
                   </div>
                 ))}

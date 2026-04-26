@@ -31,7 +31,7 @@ export function Services() {
           <h2 className="reveal mt-4 text-3xl md:text-5xl font-bold leading-tight">
             Kompleksowa <span className="text-gradient">obsługa Twojego auta</span>
           </h2>
-          <p className="reveal mt-5 text-muted-foreground">
+          <p className="reveal mt-5 text-lg text-foreground/80 leading-relaxed">
             Od rutynowego przeglądu po skomplikowane naprawy — wszystko pod jednym dachem.
           </p>
         </div>
@@ -49,7 +49,7 @@ export function Services() {
                   <s.icon className="h-7 w-7" />
                 </div>
                 <h3 className="mt-5 text-lg font-semibold">{s.title}</h3>
-                <p className="mt-2 text-sm text-muted-foreground leading-relaxed">{s.desc}</p>
+                <p className="mt-2 text-sm md:text-base text-foreground/75 leading-relaxed">{s.desc}</p>
               </div>
             </div>
           ))}

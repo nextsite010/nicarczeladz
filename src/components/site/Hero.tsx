@@ -56,10 +56,10 @@ export function Hero() {
         </h1>
 
         <p
-          className="mx-auto mt-6 max-w-2xl text-base md:text-lg text-muted-foreground animate-fade-up"
+          className="mx-auto mt-7 max-w-2xl text-lg md:text-xl text-foreground/85 leading-relaxed animate-fade-up"
           style={{ animationDelay: "0.4s" }}
         >
-          Szybka diagnoza, uczciwe ceny, doświadczeni mechanicy. Twoje auto w rękach pasjonatów.
+          Szybka diagnoza, uczciwe ceny, doświadczeni mechanicy. Twoje auto w&nbsp;rękach pasjonatów.
         </p>
 
         <div
@@ -83,7 +83,7 @@ export function Hero() {
 
         {/* Stats */}
         <div
-          className="mt-16 grid grid-cols-3 gap-4 max-w-2xl mx-auto animate-fade-up"
+          className="mt-16 grid grid-cols-3 gap-3 sm:gap-6 max-w-2xl mx-auto animate-fade-up"
           style={{ animationDelay: "0.8s" }}
         >
           {[
@@ -92,8 +92,8 @@ export function Hero() {
             { v: "24h", l: "Szybka realizacja" },
           ].map((s) => (
             <div key={s.l} className="text-center">
-              <div className="text-2xl md:text-4xl font-bold text-gradient">{s.v}</div>
-              <div className="mt-1 text-[11px] md:text-xs uppercase tracking-wider text-muted-foreground">
+              <div className="text-3xl md:text-4xl font-bold text-gradient">{s.v}</div>
+              <div className="mt-2 text-xs md:text-sm font-medium tracking-wide text-foreground/80">
                 {s.l}
               </div>
             </div>

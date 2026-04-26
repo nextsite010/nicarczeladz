@@ -34,7 +34,7 @@ export function WhyUs() {
                   <p.icon className="h-6 w-6" />
                 </div>
                 <h3 className="mt-5 text-xl font-semibold">{p.title}</h3>
-                <p className="mt-2 text-sm text-muted-foreground leading-relaxed">{p.desc}</p>
+                <p className="mt-2 text-sm md:text-base text-foreground/75 leading-relaxed">{p.desc}</p>
               </div>
             </div>
           ))}
