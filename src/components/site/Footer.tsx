@@ -1,5 +1,5 @@
 import { Phone, Mail, MapPin } from "lucide-react";
-import { Logo } from "./Logo";
+import logo from "@/assets/nicar-logo.png";
 
 export function Footer() {
   return (
@@ -7,8 +7,12 @@ export function Footer() {
       <div className="container mx-auto px-4 md:px-8 py-14">
         <div className="grid md:grid-cols-3 gap-10">
           <div>
-            <Logo />
-            <p className="mt-4 text-sm text-muted-foreground leading-relaxed max-w-sm">
+            <img
+              src={logo}
+              alt="Nicar Auto Serwis — logo"
+              className="h-14 w-auto object-contain"
+            />
+            <p className="mt-5 text-sm text-muted-foreground leading-relaxed max-w-sm">
               Profesjonalny serwis samochodowy w Czeladzi. Szybko, uczciwie, z gwarancją jakości.
             </p>
           </div>
