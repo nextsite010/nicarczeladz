@@ -1,4 +1,5 @@
 import { Phone, Mail, MapPin } from "lucide-react";
+import { Link } from "@tanstack/react-router";
 import logo from "@/assets/nicar-logo.png";
 
 export function Footer() {
@@ -20,11 +21,11 @@ export function Footer() {
           <div>
             <h4 className="text-sm font-semibold uppercase tracking-wider">Nawigacja</h4>
             <ul className="mt-4 space-y-2.5 text-base text-foreground/75">
-              <li><a href="#o-nas" className="hover:text-primary transition-colors">O nas</a></li>
-              <li><a href="#uslugi" className="hover:text-primary transition-colors">Usługi</a></li>
-              <li><a href="#opinie" className="hover:text-primary transition-colors">Opinie</a></li>
-              <li><a href="#dlaczego-my" className="hover:text-primary transition-colors">Dlaczego my</a></li>
-              <li><a href="#kontakt" className="hover:text-primary transition-colors">Kontakt</a></li>
+              <li><Link to="/" className="hover:text-primary transition-colors">Start</Link></li>
+              <li><Link to="/o-nas" className="hover:text-primary transition-colors">O nas</Link></li>
+              <li><Link to="/uslugi" className="hover:text-primary transition-colors">Usługi</Link></li>
+              <li><Link to="/opinie" className="hover:text-primary transition-colors">Opinie</Link></li>
+              <li><Link to="/kontakt" className="hover:text-primary transition-colors">Kontakt</Link></li>
             </ul>
           </div>
 
