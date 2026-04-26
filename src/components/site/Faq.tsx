@@ -36,7 +36,7 @@ const faqs = [
 const guarantees = [
   { icon: ShieldCheck, t: "Gwarancja na robociznę", d: "Pisemna, każde zlecenie" },
   { icon: Award, t: "Oryginalne części", d: "Lub równoważnik wysokiej jakości" },
-  { icon: Wrench, t: "Doświadczeni mechanicy", d: "15+ lat w branży" },
+  { icon: Wrench, t: "Doświadczeni mechanicy", d: "5 lat w branży" },
   { icon: Clock, t: "Termin pod kontrolą", d: "Naprawa w ustalonym czasie" },
 ];
 
