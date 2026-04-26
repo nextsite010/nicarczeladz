@@ -1,8 +1,12 @@
 import { Phone, MapPin, Clock, Mail } from "lucide-react";
 
 const hours = [
-  { d: "Poniedziałek – Piątek", h: "08:00 – 18:00" },
-  { d: "Sobota", h: "09:00 – 14:00" },
+  { d: "Poniedziałek", h: "09:00 – 17:00" },
+  { d: "Wtorek", h: "09:00 – 17:00" },
+  { d: "Środa", h: "09:00 – 17:00" },
+  { d: "Czwartek", h: "09:00 – 17:00" },
+  { d: "Piątek", h: "09:00 – 17:00" },
+  { d: "Sobota", h: "Zamknięte" },
   { d: "Niedziela", h: "Zamknięte" },
 ];
 
