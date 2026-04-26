@@ -67,7 +67,7 @@ export function Hero() {
           style={{ animationDelay: "0.6s" }}
         >
           <a
-            href="tel:+48500000000"
+            href="tel:+48730020887"
             className="group relative inline-flex items-center gap-3 rounded-full bg-gradient-primary px-8 py-4 text-base font-semibold text-primary-foreground shadow-elegant transition-all duration-300 hover:scale-105 hover:shadow-glow"
           >
             <Phone className="h-5 w-5 transition-transform group-hover:rotate-12" />
@@ -87,9 +87,9 @@ export function Hero() {
           style={{ animationDelay: "0.8s" }}
         >
           {[
+            { v: "4.9★", l: "Ocena · 98 opinii" },
             { v: "15+", l: "Lat doświadczenia" },
-            { v: "5000+", l: "Zadowolonych klientów" },
-            { v: "4.9★", l: "Średnia ocena" },
+            { v: "24h", l: "Szybka realizacja" },
           ].map((s) => (
             <div key={s.l} className="text-center">
               <div className="text-2xl md:text-4xl font-bold text-gradient">{s.v}</div>

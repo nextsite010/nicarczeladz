@@ -54,7 +54,7 @@ export function Navbar() {
         </nav>
 
         <a
-          href="tel:+48500000000"
+          href="tel:+48730020887"
           className="group inline-flex items-center gap-2 rounded-full bg-gradient-primary px-4 py-2.5 md:px-5 md:py-3 text-sm font-semibold text-primary-foreground shadow-elegant transition-all duration-300 hover:scale-105 hover:shadow-glow"
         >
           <Phone className="h-4 w-4 transition-transform group-hover:rotate-12" />
