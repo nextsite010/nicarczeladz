@@ -10,6 +10,7 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as UslugiRouteImport } from './routes/uslugi'
+import { Route as RezerwacjaRouteImport } from './routes/rezerwacja'
 import { Route as OpinieRouteImport } from './routes/opinie'
 import { Route as ONasRouteImport } from './routes/o-nas'
 import { Route as KontaktRouteImport } from './routes/kontakt'
@@ -18,6 +19,11 @@ import { Route as IndexRouteImport } from './routes/index'
 const UslugiRoute = UslugiRouteImport.update({
   id: '/uslugi',
   path: '/uslugi',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const RezerwacjaRoute = RezerwacjaRouteImport.update({
+  id: '/rezerwacja',
+  path: '/rezerwacja',
   getParentRoute: () => rootRouteImport,
 } as any)
 const OpinieRoute = OpinieRouteImport.update({
@@ -46,6 +52,7 @@ export interface FileRoutesByFullPath {
   '/kontakt': typeof KontaktRoute
   '/o-nas': typeof ONasRoute
   '/opinie': typeof OpinieRoute
+  '/rezerwacja': typeof RezerwacjaRoute
   '/uslugi': typeof UslugiRoute
 }
 export interface FileRoutesByTo {
@@ -53,6 +60,7 @@ export interface FileRoutesByTo {
   '/kontakt': typeof KontaktRoute
   '/o-nas': typeof ONasRoute
   '/opinie': typeof OpinieRoute
+  '/rezerwacja': typeof RezerwacjaRoute
   '/uslugi': typeof UslugiRoute
 }
 export interface FileRoutesById {
@@ -61,14 +69,22 @@ export interface FileRoutesById {
   '/kontakt': typeof KontaktRoute
   '/o-nas': typeof ONasRoute
   '/opinie': typeof OpinieRoute
+  '/rezerwacja': typeof RezerwacjaRoute
   '/uslugi': typeof UslugiRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/kontakt' | '/o-nas' | '/opinie' | '/uslugi'
+  fullPaths: '/' | '/kontakt' | '/o-nas' | '/opinie' | '/rezerwacja' | '/uslugi'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/kontakt' | '/o-nas' | '/opinie' | '/uslugi'
-  id: '__root__' | '/' | '/kontakt' | '/o-nas' | '/opinie' | '/uslugi'
+  to: '/' | '/kontakt' | '/o-nas' | '/opinie' | '/rezerwacja' | '/uslugi'
+  id:
+    | '__root__'
+    | '/'
+    | '/kontakt'
+    | '/o-nas'
+    | '/opinie'
+    | '/rezerwacja'
+    | '/uslugi'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -76,6 +92,7 @@ export interface RootRouteChildren {
   KontaktRoute: typeof KontaktRoute
   ONasRoute: typeof ONasRoute
   OpinieRoute: typeof OpinieRoute
+  RezerwacjaRoute: typeof RezerwacjaRoute
   UslugiRoute: typeof UslugiRoute
 }
 
@@ -86,6 +103,13 @@ declare module '@tanstack/react-router' {
       path: '/uslugi'
       fullPath: '/uslugi'
       preLoaderRoute: typeof UslugiRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/rezerwacja': {
+      id: '/rezerwacja'
+      path: '/rezerwacja'
+      fullPath: '/rezerwacja'
+      preLoaderRoute: typeof RezerwacjaRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/opinie': {
@@ -124,8 +148,18 @@ const rootRouteChildren: RootRouteChildren = {
   KontaktRoute: KontaktRoute,
   ONasRoute: ONasRoute,
   OpinieRoute: OpinieRoute,
+  RezerwacjaRoute: RezerwacjaRoute,
   UslugiRoute: UslugiRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
+
+import type { getRouter } from './router.tsx'
+import type { createStart } from '@tanstack/react-start'
+declare module '@tanstack/react-start' {
+  interface Register {
+    ssr: true
+    router: Awaited<ReturnType<typeof getRouter>>
+  }
+}
