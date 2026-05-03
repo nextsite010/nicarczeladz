@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Phone, Menu, X } from "lucide-react";
+import { Phone, Menu, X, CalendarCheck } from "lucide-react";
 import { Link } from "@tanstack/react-router";
 import logo from "@/assets/nicar-logo.png";
 
@@ -7,6 +7,7 @@ const links = [
   { to: "/", label: "Start" },
   { to: "/o-nas", label: "O nas" },
   { to: "/uslugi", label: "Usługi" },
+  { to: "/rezerwacja", label: "Rezerwacja" },
   { to: "/opinie", label: "Opinie" },
   { to: "/kontakt", label: "Kontakt" },
 ] as const;
@@ -66,6 +67,13 @@ export function Navbar() {
         </nav>
 
         <div className="flex items-center gap-2">
+          <Link
+            to="/rezerwacja"
+            className="hidden md:inline-flex items-center gap-2 rounded-full border border-primary/40 bg-primary/10 px-4 py-2.5 text-sm font-semibold text-primary hover:bg-primary/20 transition-colors"
+          >
+            <CalendarCheck className="h-4 w-4" />
+            Rezerwacja
+          </Link>
           <a
             href="tel:+48730020887"
             className="group inline-flex items-center gap-2 rounded-full bg-gradient-primary px-4 py-2.5 md:px-5 md:py-3 text-sm font-semibold text-primary-foreground shadow-elegant transition-all duration-300 hover:scale-105 hover:shadow-glow"
