@@ -43,8 +43,8 @@ serwisujemy, naprawiamy a przede wszystkim dbamy o wasze bezpieczeństwo. Nie zw
       { name: "twitter:title", content: "NICAR Auto Serwis" },
       { name: "twitter:description", content: "Zajmujemy się mechaniką samochodową,
 serwisujemy, naprawiamy a przede wszystkim dbamy o wasze bezpieczeństwo. Nie zwlekaj umów się już dziś!" },
-      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/bd35e264-ffc8-4fed-ba42-0dea85007891/id-preview-a07eb371--a9b99882-b491-4f1c-a8c4-914d77a24636.lovable.app-1777836070424.png" },
-      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/bd35e264-ffc8-4fed-ba42-0dea85007891/id-preview-a07eb371--a9b99882-b491-4f1c-a8c4-914d77a24636.lovable.app-1777836070424.png" },
+      { property: "og:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/attachments/og-images/cfed4415-a82d-44ad-b47c-9b7f658fad2f" },
+      { name: "twitter:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/attachments/og-images/cfed4415-a82d-44ad-b47c-9b7f658fad2f" },
     ],
     links: [
       {
