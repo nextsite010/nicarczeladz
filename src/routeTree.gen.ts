@@ -10,14 +10,21 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as UslugiRouteImport } from './routes/uslugi'
+import { Route as RezerwacjaRouteImport } from './routes/rezerwacja'
 import { Route as OpinieRouteImport } from './routes/opinie'
 import { Route as ONasRouteImport } from './routes/o-nas'
 import { Route as KontaktRouteImport } from './routes/kontakt'
+import { Route as AdminRouteImport } from './routes/admin'
 import { Route as IndexRouteImport } from './routes/index'
 
 const UslugiRoute = UslugiRouteImport.update({
   id: '/uslugi',
   path: '/uslugi',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const RezerwacjaRoute = RezerwacjaRouteImport.update({
+  id: '/rezerwacja',
+  path: '/rezerwacja',
   getParentRoute: () => rootRouteImport,
 } as any)
 const OpinieRoute = OpinieRouteImport.update({
@@ -35,6 +42,11 @@ const KontaktRoute = KontaktRouteImport.update({
   path: '/kontakt',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AdminRoute = AdminRouteImport.update({
+  id: '/admin',
+  path: '/admin',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
@@ -43,39 +55,69 @@ const IndexRoute = IndexRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/admin': typeof AdminRoute
   '/kontakt': typeof KontaktRoute
   '/o-nas': typeof ONasRoute
   '/opinie': typeof OpinieRoute
+  '/rezerwacja': typeof RezerwacjaRoute
   '/uslugi': typeof UslugiRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/admin': typeof AdminRoute
   '/kontakt': typeof KontaktRoute
   '/o-nas': typeof ONasRoute
   '/opinie': typeof OpinieRoute
+  '/rezerwacja': typeof RezerwacjaRoute
   '/uslugi': typeof UslugiRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/admin': typeof AdminRoute
   '/kontakt': typeof KontaktRoute
   '/o-nas': typeof ONasRoute
   '/opinie': typeof OpinieRoute
+  '/rezerwacja': typeof RezerwacjaRoute
   '/uslugi': typeof UslugiRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/kontakt' | '/o-nas' | '/opinie' | '/uslugi'
+  fullPaths:
+    | '/'
+    | '/admin'
+    | '/kontakt'
+    | '/o-nas'
+    | '/opinie'
+    | '/rezerwacja'
+    | '/uslugi'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/kontakt' | '/o-nas' | '/opinie' | '/uslugi'
-  id: '__root__' | '/' | '/kontakt' | '/o-nas' | '/opinie' | '/uslugi'
+  to:
+    | '/'
+    | '/admin'
+    | '/kontakt'
+    | '/o-nas'
+    | '/opinie'
+    | '/rezerwacja'
+    | '/uslugi'
+  id:
+    | '__root__'
+    | '/'
+    | '/admin'
+    | '/kontakt'
+    | '/o-nas'
+    | '/opinie'
+    | '/rezerwacja'
+    | '/uslugi'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AdminRoute: typeof AdminRoute
   KontaktRoute: typeof KontaktRoute
   ONasRoute: typeof ONasRoute
   OpinieRoute: typeof OpinieRoute
+  RezerwacjaRoute: typeof RezerwacjaRoute
   UslugiRoute: typeof UslugiRoute
 }
 
@@ -86,6 +128,13 @@ declare module '@tanstack/react-router' {
       path: '/uslugi'
       fullPath: '/uslugi'
       preLoaderRoute: typeof UslugiRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/rezerwacja': {
+      id: '/rezerwacja'
+      path: '/rezerwacja'
+      fullPath: '/rezerwacja'
+      preLoaderRoute: typeof RezerwacjaRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/opinie': {
@@ -109,6 +158,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof KontaktRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/admin': {
+      id: '/admin'
+      path: '/admin'
+      fullPath: '/admin'
+      preLoaderRoute: typeof AdminRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -121,20 +177,13 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AdminRoute: AdminRoute,
   KontaktRoute: KontaktRoute,
   ONasRoute: ONasRoute,
   OpinieRoute: OpinieRoute,
+  RezerwacjaRoute: RezerwacjaRoute,
   UslugiRoute: UslugiRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
-
-import type { getRouter } from './router.tsx'
-import type { createStart } from '@tanstack/react-start'
-declare module '@tanstack/react-start' {
-  interface Register {
-    ssr: true
-    router: Awaited<ReturnType<typeof getRouter>>
-  }
-}
